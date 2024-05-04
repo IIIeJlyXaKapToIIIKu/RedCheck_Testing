@@ -7,7 +7,7 @@ $dbName = "usersdb";
 $link = mysqli_connect($servername, $username, $password);
 
 if (!$link) {
-    die("Ошибка подключения: " . mysqli_connection_error());
+    die("Ошибка подключения: " . mysqli_connect_error());
 }
 
 $sql = "CREATE DATABASE IF NOT EXISTS $dbName";
@@ -24,7 +24,7 @@ $sql = "CREATE TABLE IF NOT EXISTS users(
     id  INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(15) NOT NULL,
     email VARCHAR(50) NOT NULL,
-    pass VARCHAR(20) NOT NULL
+    password VARCHAR(20) NOT NULL
 )";
 
 if(!mysqli_query($link, $sql)) {

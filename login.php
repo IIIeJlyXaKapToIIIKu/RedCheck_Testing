@@ -45,7 +45,7 @@
 
         if (!$username || !$password) die ('Пожалуйста введите все значения!');
 
-        $sql = "SELECT * FROM users WHERE username='$username' AND pass='$password'";
+        $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 
         $result = mysqli_query($link, $sql);
 
